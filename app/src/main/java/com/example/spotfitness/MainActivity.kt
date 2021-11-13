@@ -13,8 +13,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
+        iv_menuBar.setOnClickListener {
+            Toast.makeText(this, "opening profile ", Toast.LENGTH_SHORT).show()
+        }
         val homeFragment = HomeFragment()
         createFragment(homeFragment)
         //for the bottom navigation bar
