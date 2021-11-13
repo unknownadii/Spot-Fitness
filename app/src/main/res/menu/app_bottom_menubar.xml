@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_icon"
+        android:title="Home"
+        android:icon="@drawable/ic_home_icon"
+        />
+    <item
+        android:id="@+id/nutrition_icon"
+        android:title="Nutrition"
+        android:icon="@drawable/ic_nutrition_icon"
+        />
+    <item
+        android:id="@+id/exercises_icon"
+        android:title="Exercises"
+        android:icon="@drawable/cross_dumbel"
+        />
+    <item
+        android:id="@+id/history_icon"
+        android:title="History"
+        android:icon="@drawable/history_icon"
+        />
+    <item
+        android:id="@+id/bmi_icon"
+        android:title="BMI"
+        android:icon="@drawable/bmi"
+        />
+</menu>
