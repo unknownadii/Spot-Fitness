@@ -23,4 +23,10 @@
         tools:layout_editor_absoluteX="130dp"
         tools:layout_editor_absoluteY="232dp"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My First Commit" />
 </LinearLayout>
