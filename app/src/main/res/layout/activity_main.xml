@@ -35,7 +35,9 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -53,6 +55,10 @@
                 android:text="ADITYA"
                 android:textColor="@color/black"
                 />
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:src="@drawable/gym_dumbell"/>
         </LinearLayout>
 
     </LinearLayout>
