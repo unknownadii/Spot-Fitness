@@ -7,7 +7,27 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:background="@drawable/home_blue_background">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/menu_bar"
+        android:scaleType="fitXY"
+        android:layout_margin="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:layout_margin="20dp"
+        />
 
+</LinearLayout>
 
 
 </LinearLayout>
