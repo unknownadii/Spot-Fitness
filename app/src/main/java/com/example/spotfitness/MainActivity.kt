@@ -1,9 +1,11 @@
 package com.example.spotfitness
 
+import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.Window
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -43,7 +45,22 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun showDialog(title: String) {
+        val dialog = Dialog(activity)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.custom_layout)
+        val body = dialog.findViewById(R.id.body) as TextView
+        body.text = title
+        val yesBtn = dialog.findViewById(R.id.yesBtn) as Button
+        val noBtn = dialog.findViewById(R.id.noBtn) as TextView
+        yesBtn.setOnClickListener {
+            dialog.dismiss()
+        }
+        noBtn.setOnClickListener { dialog.dismiss() }
+        dialog.show()
 
+    }
 
     private fun createFragment(item: Fragment) {
         supportFragmentManager.beginTransaction().apply {
