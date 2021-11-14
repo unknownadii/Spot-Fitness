@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         iv_menuBar.setOnClickListener {
+            showDialog("aditya")
             Toast.makeText(this, "opening profile ", Toast.LENGTH_SHORT).show()
         }
         val homeFragment = HomeFragment()
