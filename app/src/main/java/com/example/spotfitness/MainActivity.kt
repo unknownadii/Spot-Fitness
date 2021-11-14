@@ -53,22 +53,21 @@ class MainActivity : AppCompatActivity() {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)
         dialog.setContentView(R.layout.profile_dialog)
-        val testingButton = dialog.findViewById<Button>(R.id.testingButton)
         val profileClose = dialog.findViewById<ImageView>(R.id.profileClose)
 
         profileClose.setOnClickListener {
             dialog.dismiss()
         }
-        dialog.show()
 
         dialog.window!!.setLayout(
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.WRAP_CONTENT
         )
+
+        dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         //animation
-        dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT));
-        dialog.window!!.getAttributes().windowAnimations = R.style.CustomDialogAnimation;
-        dialog.window!!.setGravity(Gravity.CENTER)
+        //dialog.window!!.getAttributes().windowAnimations = R.style.CustomDialogAnimation;
+        dialog.show()
     }
 
     private fun createFragment(item: Fragment) {

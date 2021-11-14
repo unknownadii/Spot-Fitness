@@ -31,7 +31,7 @@
     </style>
 
     <style name="CustomDialogAnimation">
-        <item name="android:windowEnterAnimation">@anim/translate_left_side</item>
-        <item name="android:windowExitAnimation">@anim/translate_right_side</item>
+        <item name="android:windowExitAnimation">@anim/zoom_out_animation</item>
+        <item name="android:windowEnterAnimation">@anim/zoom_in_animation</item>
     </style>
 </resources>
