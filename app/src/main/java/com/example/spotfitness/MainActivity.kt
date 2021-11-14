@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.Window
+import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         iv_menuBar.setOnClickListener {
-            showDialog("aditya")
+            showDialog()
             Toast.makeText(this, "opening profile ", Toast.LENGTH_SHORT).show()
         }
         val homeFragment = HomeFragment()
@@ -47,11 +48,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun showDialog(title: String) {
+    private fun showDialog() {
         val dialog = Dialog(this)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)
         dialog.setContentView(R.layout.profile_dialog)
+        val testingButton=dialog.findViewById<Button>(R.id.testingButton)
+
         testingButton.setOnClickListener {
             dialog.cancel()
         }
