@@ -26,4 +26,12 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/CustomDialogAnimation</item>
+    </style>
+
+    <style name="CustomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/translate_left_side</item>
+        <item name="android:windowExitAnimation">@anim/translate_right_side</item>
+    </style>
 </resources>
