@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SpotFitness">
         <activity
+            android:name=".ExerciseActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/NoActionBar"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
