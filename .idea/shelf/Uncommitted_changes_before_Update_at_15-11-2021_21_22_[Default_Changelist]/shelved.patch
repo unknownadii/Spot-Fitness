@@ -1,0 +1,465 @@
+Index: app/src/main/res/layout/profile_dialog.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\">\r\n\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:background=\"@drawable/ic_cardview_border\"\r\n        android:gravity=\"center\"\r\n        android:orientation=\"vertical\"\r\n        android:padding=\"10dp\"\r\n        android:layout_margin=\"10dp\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.5\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginBottom=\"10dp\"\r\n            android:orientation=\"horizontal\">\r\n\r\n            <ImageView\r\n                android:id=\"@+id/profileClose\"\r\n                android:layout_width=\"30dp\"\r\n                android:layout_height=\"30dp\"\r\n                android:src=\"@drawable/back_arrow\" />\r\n\r\n            <TextView\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_gravity=\"center\"\r\n                android:text=\"Profile\"\r\n                android:textColor=\"@color/black\"\r\n                android:textSize=\"20sp\"\r\n                android:textStyle=\"bold\"\r\n                android:gravity=\"center\"/>\r\n        </LinearLayout>\r\n\r\n        <androidx.cardview.widget.CardView\r\n            android:layout_width=\"150dp\"\r\n            android:layout_height=\"150dp\"\r\n            app:cardCornerRadius=\"100dp\">\r\n\r\n            <ImageView\r\n                android:layout_width=\"150dp\"\r\n                android:layout_height=\"150dp\"\r\n                android:scaleType=\"fitXY\"\r\n                android:src=\"@drawable/testing_profile\" />\r\n        </androidx.cardview.widget.CardView>\r\n\r\n\r\n\r\n    </LinearLayout>\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/profile_dialog.xml b/app/src/main/res/layout/profile_dialog.xml
+--- a/app/src/main/res/layout/profile_dialog.xml	(revision dfa7ae85d57b15f5436813e0d992f25b8bbe5ac1)
++++ b/app/src/main/res/layout/profile_dialog.xml	(date 1636920582068)
+@@ -7,18 +7,19 @@
+ 
+     <LinearLayout
+         android:layout_width="match_parent"
+-        android:layout_height="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_margin="10dp"
+         android:background="@drawable/ic_cardview_border"
+         android:gravity="center"
+         android:orientation="vertical"
+         android:padding="10dp"
+-        android:layout_margin="10dp"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.5"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent">
+ 
++        <!-- Linear layout for back button and profile title-->
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+@@ -35,27 +36,301 @@
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
++                android:gravity="center"
+                 android:text="Profile"
+                 android:textColor="@color/black"
+                 android:textSize="20sp"
+-                android:textStyle="bold"
+-                android:gravity="center"/>
++                android:textStyle="bold" />
++        </LinearLayout>
++        <!-- Linear layout for saved profile data-->
++        <LinearLayout
++            android:id="@+id/lv_savedProfileData"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:orientation="vertical">
++
++            <androidx.cardview.widget.CardView
++                android:layout_width="150dp"
++                android:layout_height="150dp"
++                android:layout_gravity="center"
++                app:cardCornerRadius="100dp">
++
++                <ImageView
++                    android:layout_width="150dp"
++                    android:layout_height="150dp"
++                    android:scaleType="fitXY"
++                    android:src="@drawable/testing_profile" />
++            </androidx.cardview.widget.CardView>
++
++            <TextView
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_gravity="left"
++                android:layout_marginLeft="10dp"
++                android:layout_marginTop="20dp"
++                android:layout_marginBottom="10dp"
++                android:text="NAME"
++                android:textColor="@color/black"
++                android:textSize="20sp"
++                android:textStyle="bold" />
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_gravity="left"
++                android:layout_marginLeft="10dp"
++                android:layout_marginRight="10dp"
++                android:background="@drawable/ic_cardview_border"
++                android:inputType="text"
++                android:maxLength="25"
++                android:padding="10dp"
++                android:text="Aditya Raj Singh"
++                android:textColor="@color/black"
++                android:textSize="25sp" />
++
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginLeft="10dp"
++                android:layout_marginTop="10dp"
++                android:layout_marginBottom="10dp"
++                android:orientation="horizontal">
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:layout_marginLeft="10dp"
++                    android:layout_weight="1"
++                    android:text="AGE"
++                    android:textColor="@color/black"
++                    android:textSize="20sp"
++                    android:textStyle="bold" />
++
++                <TextView
++                    android:layout_width="0dp"
++
++                    android:layout_height="wrap_content"
++                    android:layout_marginLeft="10dp"
++                    android:layout_weight="1"
++                    android:text="Gender"
++                    android:textColor="@color/black"
++                    android:textSize="20sp"
++                    android:textStyle="bold" />
++            </LinearLayout>
++
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:orientation="horizontal">
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:layout_gravity="left"
++                    android:layout_marginLeft="10dp"
++                    android:layout_marginRight="10dp"
++                    android:layout_weight="1"
++                    android:background="@drawable/ic_cardview_border"
++                    android:inputType="number"
++                    android:maxLength="3"
++                    android:padding="10dp"
++                    android:text="20"
++                    android:textColor="@color/black"
++                    android:textSize="25sp" />
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:layout_gravity="left"
++                    android:layout_marginLeft="10dp"
++                    android:layout_marginRight="10dp"
++                    android:layout_weight="1"
++                    android:background="@drawable/ic_cardview_border"
++                    android:inputType="text"
++                    android:maxLength="10"
++                    android:padding="10dp"
++                    android:text="Male"
++                    android:textColor="@color/black"
++                    android:textSize="25sp" />
++            </LinearLayout>
++
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:orientation="horizontal">
++
++                <LinearLayout
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    android:layout_marginLeft="30dp"
++                    android:layout_marginTop="20dp"
++                    android:layout_marginBottom="10dp"
++                    android:background="@drawable/ic_cardview_border"
++                    android:clickable="true"
++                    android:orientation="horizontal">
++
++                    <ImageView
++                        android:id="@+id/logout_btn"
++                        android:layout_width="30dp"
++                        android:layout_height="30dp"
++                        android:outlineAmbientShadowColor="@color/purple"
++                        android:outlineSpotShadowColor="@color/purple"
++                        android:src="@drawable/logout_icon" />
++
++                    <TextView
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:text="Logout"
++                        android:textColor="@color/black"
++                        android:textSize="20sp"
++                        android:textStyle="bold" />
++                </LinearLayout>
++
++                <Button
++                    android:id="@+id/edit_btnProfile"
++                    android:layout_width="120dp"
++                    android:layout_height="45dp"
++                    android:layout_marginLeft="70dp"
++                    android:layout_marginTop="20dp"
++                    android:layout_marginBottom="10dp"
++                    android:background="@drawable/button_border"
++                    android:text="Edit"
++                    android:textAlignment="center"
++                    android:textSize="20dp" />
++            </LinearLayout>
+         </LinearLayout>
++        <!-- Linear layout for edit profile data-->
++        <LinearLayout
++            android:id="@+id/lv_editProfileData"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:orientation="vertical"
++            android:visibility="gone">
+ 
+-        <androidx.cardview.widget.CardView
+-            android:layout_width="150dp"
+-            android:layout_height="150dp"
+-            app:cardCornerRadius="100dp">
++            <androidx.cardview.widget.CardView
++                android:layout_width="150dp"
++                android:layout_height="150dp"
++                android:layout_gravity="center"
++                app:cardCornerRadius="100dp">
+ 
+-            <ImageView
+-                android:layout_width="150dp"
+-                android:layout_height="150dp"
+-                android:scaleType="fitXY"
+-                android:src="@drawable/testing_profile" />
+-        </androidx.cardview.widget.CardView>
++                <ImageView
++                    android:layout_width="150dp"
++                    android:layout_height="150dp"
++                    android:scaleType="fitXY"
++                    android:src="@drawable/testing_profile" />
++            </androidx.cardview.widget.CardView>
+ 
++            <TextView
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_gravity="left"
++                android:layout_marginLeft="10dp"
++                android:layout_marginTop="20dp"
++                android:layout_marginBottom="10dp"
++                android:text="NAME"
++                android:textColor="@color/black"
++                android:textSize="20sp"
++                android:textStyle="bold" />
++
++            <EditText
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_gravity="left"
++                android:layout_marginLeft="10dp"
++                android:layout_marginRight="10dp"
++                android:background="@drawable/ic_cardview_border"
++                android:hint="Enter Your Name"
++                android:inputType="text"
++                android:maxLength="25"
++                android:padding="10dp"
++                android:textColor="@color/black"
++                android:textSize="25sp" />
+ 
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginLeft="10dp"
++                android:layout_marginTop="10dp"
++                android:layout_marginBottom="10dp"
++                android:orientation="horizontal">
+ 
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:layout_marginLeft="10dp"
++                    android:layout_weight="1"
++                    android:text="AGE"
++                    android:textColor="@color/black"
++                    android:textSize="20sp"
++                    android:textStyle="bold" />
++
++                <TextView
++                    android:layout_width="0dp"
++
++                    android:layout_height="wrap_content"
++                    android:layout_marginLeft="10dp"
++                    android:layout_weight="1"
++                    android:text="Gender"
++                    android:textColor="@color/black"
++                    android:textSize="20sp"
++                    android:textStyle="bold" />
++            </LinearLayout>
++
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:orientation="horizontal">
++
++                <EditText
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:layout_gravity="left"
++                    android:layout_marginLeft="10dp"
++                    android:layout_marginRight="10dp"
++                    android:layout_weight="1"
++                    android:background="@drawable/ic_cardview_border"
++                    android:hint="Enter Age"
++                    android:inputType="number"
++                    android:maxLength="3"
++                    android:padding="10dp"
++                    android:textColor="@color/black"
++                    android:textSize="25sp" />
++
++                <EditText
++                    android:layout_width="0dp"
++                    android:layout_height="wrap_content"
++                    android:layout_gravity="left"
++                    android:layout_marginLeft="10dp"
++                    android:layout_marginRight="10dp"
++                    android:layout_weight="1"
++                    android:background="@drawable/ic_cardview_border"
++                    android:hint="Enter Gender"
++                    android:inputType="text"
++                    android:maxLength="10"
++                    android:padding="10dp"
++                    android:textColor="@color/black"
++                    android:textSize="25sp" />
++            </LinearLayout>
++
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:gravity="center"
++                android:orientation="horizontal">
++
++
++                <Button
++                    android:id="@+id/submit_btnProfile"
++                    android:layout_width="130dp"
++                    android:layout_height="45dp"
++                    android:layout_marginTop="20dp"
++                    android:layout_marginBottom="10dp"
++                    android:background="@drawable/button_border"
++                    android:text="Submit"
++                    android:textAlignment="center"
++                    android:textSize="20dp" />
++            </LinearLayout>
++        </LinearLayout>
+     </LinearLayout>
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/spotfitness/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.spotfitness\r\n\r\nimport android.app.Dialog\r\nimport android.graphics.Color\r\nimport android.graphics.drawable.ColorDrawable\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport android.os.Bundle\r\nimport android.view.*\r\nimport android.widget.Button\r\nimport android.widget.ImageView\r\nimport android.widget.Toast\r\nimport androidx.fragment.app.Fragment\r\nimport kotlinx.android.synthetic.main.activity_main.*\r\nimport kotlinx.android.synthetic.main.profile_dialog.*\r\n\r\nclass MainActivity : AppCompatActivity() {\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        setContentView(R.layout.activity_main)\r\n\r\n        iv_menuBar.setOnClickListener {\r\n            showDialog()\r\n\r\n        }\r\n        val homeFragment = HomeFragment()\r\n        createFragment(homeFragment)\r\n        //for the bottom navigation bar\r\n        bottomNavigationView.background = null\r\n        bottomNavigationView.setOnItemSelectedListener {\r\n            when (it.itemId) {\r\n                R.id.home_icon -> {\r\n                    Toast.makeText(this, \"home selected\", Toast.LENGTH_SHORT).show()\r\n                }\r\n                R.id.nutrition_icon -> {\r\n                    Toast.makeText(this, \"nutrition_icon selected\", Toast.LENGTH_SHORT).show()\r\n                }\r\n                R.id.exercises_icon -> {\r\n                    Toast.makeText(this, \"exercises_icon selected\", Toast.LENGTH_SHORT).show()\r\n                }\r\n                R.id.history_icon -> {\r\n                    Toast.makeText(this, \"history_icon selected\", Toast.LENGTH_SHORT).show()\r\n                }\r\n                R.id.bmi_icon -> {\r\n                    Toast.makeText(this, \"bmi_icon selected\", Toast.LENGTH_SHORT).show()\r\n                }\r\n            }\r\n            true\r\n        }\r\n    }\r\n\r\n    private fun showDialog() {\r\n        val dialog = Dialog(this)\r\n        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)\r\n        dialog.setCancelable(false)\r\n        dialog.setContentView(R.layout.profile_dialog)\r\n        val profileClose = dialog.findViewById<ImageView>(R.id.profileClose)\r\n\r\n        profileClose.setOnClickListener {\r\n            dialog.dismiss()\r\n        }\r\n\r\n        dialog.window!!.setLayout(\r\n            ViewGroup.LayoutParams.MATCH_PARENT,\r\n            ViewGroup.LayoutParams.WRAP_CONTENT\r\n        )\r\n\r\n        dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))\r\n        //animation\r\n        //dialog.window!!.getAttributes().windowAnimations = R.style.CustomDialogAnimation;\r\n        dialog.show()\r\n    }\r\n\r\n    private fun createFragment(item: Fragment) {\r\n        supportFragmentManager.beginTransaction().apply {\r\n            replace(R.id.main_Fragment, item)\r\n            commit()\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/spotfitness/MainActivity.kt b/app/src/main/java/com/example/spotfitness/MainActivity.kt
+--- a/app/src/main/java/com/example/spotfitness/MainActivity.kt	(revision dfa7ae85d57b15f5436813e0d992f25b8bbe5ac1)
++++ b/app/src/main/java/com/example/spotfitness/MainActivity.kt	(date 1636919844922)
+@@ -8,6 +8,7 @@
+ import android.view.*
+ import android.widget.Button
+ import android.widget.ImageView
++import android.widget.LinearLayout
+ import android.widget.Toast
+ import androidx.fragment.app.Fragment
+ import kotlinx.android.synthetic.main.activity_main.*
+@@ -54,11 +55,29 @@
+         dialog.setCancelable(false)
+         dialog.setContentView(R.layout.profile_dialog)
+         val profileClose = dialog.findViewById<ImageView>(R.id.profileClose)
++        val logout = dialog.findViewById<ImageView>(R.id.logout_btn)
++        val editBtnProfile = dialog.findViewById<Button>(R.id.edit_btnProfile)
++        val submitBtnProfile = dialog.findViewById<Button>(R.id.submit_btnProfile)
++        val lvSavedProfile = dialog.findViewById<LinearLayout>(R.id.lv_savedProfileData)
++        val lvEditProfile = dialog.findViewById<LinearLayout>(R.id.lv_editProfileData)
+ 
+         profileClose.setOnClickListener {
+             dialog.dismiss()
+         }
+ 
++        editBtnProfile.setOnClickListener {
++            lvSavedProfile.visibility=View.GONE
++            lvEditProfile.visibility=View.VISIBLE
++        }
++        submitBtnProfile.setOnClickListener {
++            lvSavedProfile.visibility=View.VISIBLE
++            lvEditProfile.visibility=View.GONE
++            Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show()
++        }
++        logout.setOnClickListener {
++            Toast.makeText(this, "Logging Out", Toast.LENGTH_SHORT).show()
++            dialog.dismiss()
++        }
+         dialog.window!!.setLayout(
+             ViewGroup.LayoutParams.MATCH_PARENT,
+             ViewGroup.LayoutParams.WRAP_CONTENT
+Index: app/src/main/res/drawable/button_border.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/button_border.xml b/app/src/main/res/drawable/button_border.xml
+new file mode 100644
+--- /dev/null	(date 1636915623389)
++++ b/app/src/main/res/drawable/button_border.xml	(date 1636915623389)
+@@ -0,0 +1,15 @@
++<?xml version="1.0" encoding="utf-8"?>
++
++<shape xmlns:android="http://schemas.android.com/apk/res/android"
++    android:shape="rectangle">
++
++    <corners android:radius="20dp"
++        />
++    <solid
++        android:color="@color/purple"/>
++    <padding
++        android:bottom="7dp"
++        android:left="7dp"
++        android:right="7dp"
++        android:top="7dp" />
++</shape>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DesignSurface\">\r\n    <option name=\"filePathToZoomLevelMap\">\r\n      <map>\r\n        <entry key=\"..\\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/drawable/ic_cardview_border.xml\" value=\"0.14027777777777778\" />\r\n        <entry key=\"..\\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/activity_main.xml\" value=\"0.176\" />\r\n        <entry key=\"..\\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/fragment_home.xml\" value=\"0.14879107253564786\" />\r\n        <entry key=\"..\\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/profile_dialog.xml\" value=\"0.16666666666666666\" />\r\n        <entry key=\"..\\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/menu/app_bottom_menubar.xml\" value=\"0.16666666666666666\" />\r\n        <entry key=\"..\\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/menu/app_menu_bar.xml\" value=\"0.16666666666666666\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" default=\"true\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision dfa7ae85d57b15f5436813e0d992f25b8bbe5ac1)
++++ b/.idea/misc.xml	(date 1636920183499)
+@@ -3,10 +3,11 @@
+   <component name="DesignSurface">
+     <option name="filePathToZoomLevelMap">
+       <map>
++        <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/drawable/button_border.xml" value="0.14305555555555555" />
+         <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/drawable/ic_cardview_border.xml" value="0.14027777777777778" />
+         <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/activity_main.xml" value="0.176" />
+         <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/fragment_home.xml" value="0.14879107253564786" />
+-        <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/profile_dialog.xml" value="0.16666666666666666" />
++        <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/profile_dialog.xml" value="0.2" />
+         <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/menu/app_bottom_menubar.xml" value="0.16666666666666666" />
+         <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/menu/app_menu_bar.xml" value="0.16666666666666666" />
+       </map>
+Index: app/src/main/res/drawable/logout_icon.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/logout_icon.xml b/app/src/main/res/drawable/logout_icon.xml
+new file mode 100644
+--- /dev/null	(date 1636916131407)
++++ b/app/src/main/res/drawable/logout_icon.xml	(date 1636916131407)
+@@ -0,0 +1,11 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="24dp"
++    android:height="24dp"
++    android:viewportWidth="24"
++    android:viewportHeight="24"
++    android:tint="?attr/colorControlNormal"
++    android:autoMirrored="true">
++  <path
++      android:fillColor="@android:color/white"
++      android:pathData="M17,7l-1.41,1.41L18.17,11H8v2h10.17l-2.58,2.58L17,17l5,-5zM4,5h8V3H4c-1.1,0 -2,0.9 -2,2v14c0,1.1 0.9,2 2,2h8v-2H4V5z"/>
++</vector>
