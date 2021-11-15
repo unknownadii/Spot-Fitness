@@ -60,14 +60,24 @@ class MainActivity : AppCompatActivity() {
         val submitBtnProfile = dialog.findViewById<Button>(R.id.submit_btnProfile)
         val lvSavedProfile = dialog.findViewById<LinearLayout>(R.id.lv_savedProfileData)
         val lvEditProfile = dialog.findViewById<LinearLayout>(R.id.lv_editProfileData)
+
         profileClose.setOnClickListener {
             dialog.dismiss()
         }
+
         editBtnProfile.setOnClickListener {
             lvSavedProfile.visibility=View.GONE
             lvEditProfile.visibility=View.VISIBLE
         }
-
+        submitBtnProfile.setOnClickListener {
+            lvSavedProfile.visibility=View.VISIBLE
+            lvEditProfile.visibility=View.GONE
+            Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show()
+        }
+        logout.setOnClickListener {
+            Toast.makeText(this, "Logging Out", Toast.LENGTH_SHORT).show()
+            dialog.dismiss()
+        }
         dialog.window!!.setLayout(
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.WRAP_CONTENT
