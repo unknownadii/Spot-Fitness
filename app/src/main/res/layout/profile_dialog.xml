@@ -92,7 +92,19 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_cardview_border"
+                android:hint="Enter Your Name"
+                android:inputType="text"
+                android:maxLength="25"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
             <TextView
                 android:layout_width="0dp"
 
