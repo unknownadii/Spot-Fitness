@@ -63,6 +63,13 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
         <Button
             android:id="@+id/edit_btnProfile"
             android:layout_width="120dp"
