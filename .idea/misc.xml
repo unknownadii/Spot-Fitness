@@ -3,12 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/drawable/ic_cardview_border.xml" value="0.14027777777777778" />
-        <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/activity_main.xml" value="0.176" />
-        <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/fragment_home.xml" value="0.14879107253564786" />
-        <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/profile_dialog.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/menu/app_bottom_menubar.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/menu/app_menu_bar.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/MAYANK VERMA/Desktop/SpotFitness/SpotFitness/app/src/main/res/drawable/button_border.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/MAYANK VERMA/Desktop/SpotFitness/SpotFitness/app/src/main/res/drawable/logout_icon.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/MAYANK VERMA/Desktop/SpotFitness/SpotFitness/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/MAYANK VERMA/Desktop/SpotFitness/SpotFitness/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/MAYANK VERMA/Desktop/SpotFitness/SpotFitness/app/src/main/res/layout/profile_dialog.xml" value="0.25" />
       </map>
     </option>
   </component>
