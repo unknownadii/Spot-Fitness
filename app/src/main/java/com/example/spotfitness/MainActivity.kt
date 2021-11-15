@@ -63,6 +63,10 @@ class MainActivity : AppCompatActivity() {
         profileClose.setOnClickListener {
             dialog.dismiss()
         }
+        editBtnProfile.setOnClickListener {
+            lvSavedProfile.visibility=View.GONE
+            lvEditProfile.visibility=View.VISIBLE
+        }
 
         dialog.window!!.setLayout(
             ViewGroup.LayoutParams.MATCH_PARENT,
