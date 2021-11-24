@@ -78,8 +78,9 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
-
+                <!--Level 1 card views-->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_level1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
@@ -117,7 +118,9 @@
                             android:textSize="20sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+                <!--Level 2 card views-->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_level2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -167,7 +170,9 @@
             android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
+            <!--Level 3 card views-->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_level3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -204,8 +209,9 @@
                         android:textSize="20sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
+            <!--Level 4 card views-->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_level4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -263,8 +269,9 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="10dp"
             android:orientation="horizontal">
-
+            <!--Age 16 card views-->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_age16"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -302,7 +309,9 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <!--Level 20-23 card views-->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_age20"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -347,8 +356,9 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="10dp"
             android:orientation="horizontal">
-
+            <!--Level 25-30 card views-->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_age25"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -385,8 +395,9 @@
                         android:textSize="20sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
+            <!--Level 30 above card views-->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_age30"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

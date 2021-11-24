@@ -10,8 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SpotFitness">
         <activity
+            android:name=".DoingExerciseActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar"/>
+
+        <activity
             android:name=".ExerciseActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
