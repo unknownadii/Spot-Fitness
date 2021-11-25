@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/drawable/button_border.xml" value="0.14305555555555555" />
         <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/drawable/ic_cardview_border.xml" value="0.14027777777777778" />
+        <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/drawable/popup_dialog_shape_frame.xml" value="0.21851851851851853" />
         <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/drawable/progressbar_background.xml" value="0.22037037037037038" />
         <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/drawable/timer_animation.xml" value="0.22037037037037038" />
         <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/activity_doing_exercise.xml" value="0.2" />
@@ -12,6 +13,7 @@
         <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/activity_exercise.xml" value="0.2" />
         <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/activity_finish.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/bottom_popup.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/dialog_custom_back_confirmation.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/91766/Desktop/kotlintesting apps/SpotFitness/app/src/main/res/layout/profile_dialog.xml" value="0.2" />
