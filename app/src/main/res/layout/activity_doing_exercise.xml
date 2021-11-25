@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DoingExerciseActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_Doing_exercise"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+    <TextView
+        android:id="@+id/tv_GetReadyFor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Ready For :-"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_upcomingExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Push-Ups"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_doingExercise"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_cardview_border"
+        android:src="@drawable/chairdips"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_goingOnExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Push-Ups"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:visibility="visible" />
+
+    <FrameLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <ProgressBar
+            android:id="@+id/progressBarExercise"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@drawable/progressbar_background"
+            android:indeterminate="false"
+            android:max="10"
+            android:progress="100"
+            android:progressDrawable="@drawable/timer_animation"
+            android:rotation="-90" />
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/purple"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                tools:text="10" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_StopExercise"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_border"
+        android:text="Stop"
+        android:visibility="visible"/>
+    </LinearLayout>
+</LinearLayout>
