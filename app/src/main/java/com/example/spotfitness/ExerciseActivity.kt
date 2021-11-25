@@ -3,6 +3,7 @@ package com.example.spotfitness
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_exercise.*
 
@@ -20,10 +21,9 @@ class ExerciseActivity : AppCompatActivity() {
         // this creates a vertical layout Manager
         rv_ExerciseActivity.layoutManager = LinearLayoutManager(this)
 
-        val data = ArrayList<ExerciseData>()
-        addExerciseData(data)
+        val userData = AllExercisesClass.addExerciseData()
         // This will pass the ArrayList to our Adapter
-        val adapter = ExerciseAdapter(data)
+        val adapter = ExerciseAdapter(userData)
 
         // Setting the Adapter with the recyclerview
        rv_ExerciseActivity.adapter = adapter
@@ -34,47 +34,4 @@ class ExerciseActivity : AppCompatActivity() {
 
     }
 
-    private fun addExerciseData(listData :ArrayList<ExerciseData>)
-    {
-        listData.add(
-            ExerciseData(R.drawable.star_jump,
-            "Star Jump","10 Second")
-        )
-        listData.add(
-            ExerciseData(R.drawable.squates,
-                "Squats","10 Second")
-        )
-        listData.add(
-            ExerciseData(R.drawable.pushups,
-                "Push Ups","10 Second")
-        )
-        listData.add(
-            ExerciseData(R.drawable.lungs,
-                "Lunges","10 Second")
-        )
-        listData.add(
-            ExerciseData(R.drawable.plank,
-                "Plank","10 Second")
-        )
-        listData.add(
-            ExerciseData(R.drawable.sideplank,
-                "Side Plank","10 Second")
-        )
-        listData.add(
-            ExerciseData(R.drawable.stepups,
-                "Step-ups","10 Second")
-        )
-        listData.add(
-            ExerciseData(R.drawable.chairdips,
-                "Chair dips","10 Second")
-        )
-        listData.add(
-            ExerciseData(R.drawable.wallsit,
-                "Wall sit","10 Second")
-        )
-        listData.add(
-            ExerciseData(R.drawable.pullups,
-                "Pull-ups","10 Second")
-        )
-    }
 }

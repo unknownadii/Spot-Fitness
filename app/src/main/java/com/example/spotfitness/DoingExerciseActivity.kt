@@ -26,16 +26,9 @@ class DoingExerciseActivity : AppCompatActivity() {
 
         progressBarExercise.progress = restProgress
         // Sets the current progress to the specified value.
-
-        /**
-         * @param millisInFuture The number of millis in the future from the call
-         *   to {#start()} until the countdown is done and {#onFinish()}
-         *   is called.
-         * @param countDownInterval The interval along the way to receive
-         *   {#onTick(long)} callbacks.
-         */
         // Here we have started a timer of 10 seconds so the 10000 is milliseconds is 10 seconds and the countdown interval is 1 second so it 1000.
-        restTimer = object : CountDownTimer(10000, 1000) {
+        restTimer = object : CountDownTimer(10000, 1000)
+        {
             override fun onTick(millisUntilFinished: Long) {
                 restProgress++
                 // It is increased by 1
