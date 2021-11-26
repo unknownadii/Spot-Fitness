@@ -17,5 +17,8 @@ class FinishActivity : AppCompatActivity() {
         toolbar_Finish_exercise.setNavigationOnClickListener {
             onBackPressed()
         }
+        btn_Finish.setOnClickListener {
+            finish()
+        }
     }
 }

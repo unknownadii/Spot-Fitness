@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.NutritionFragment">
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_cardview_border"
+        android:drawableRight="@drawable/ic_search_24"
+        android:hint="Search"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_Nutrition"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Search To Get Info"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp">
+
+        <TextView
+            android:id="@+id/tv_DishName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:text="Dish Name"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_Discription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:inputType="textMultiLine"
+            android:text="Discription"
+            android:textSize="20sp"
+            android:maxLength="100"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -11,8 +11,8 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.spotfitness.Fragments.*
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.profile_dialog.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,19 +30,25 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.home_icon -> {
-                    Toast.makeText(this, "home selected", Toast.LENGTH_SHORT).show()
+                    val homeFragment = HomeFragment()
+                    createFragment(homeFragment)
                 }
                 R.id.nutrition_icon -> {
-                    Toast.makeText(this, "nutrition_icon selected", Toast.LENGTH_SHORT).show()
+                    val nutritionFragment = NutritionFragment()
+                    createFragment(nutritionFragment)
+
                 }
                 R.id.exercises_icon -> {
-                    Toast.makeText(this, "exercises_icon selected", Toast.LENGTH_SHORT).show()
+                    val exerciseFragment = ExerciseFragment()
+                    createFragment(exerciseFragment)
                 }
                 R.id.history_icon -> {
-                    Toast.makeText(this, "history_icon selected", Toast.LENGTH_SHORT).show()
+                    val historyFragment = HistoryFragment()
+                    createFragment(historyFragment)
                 }
                 R.id.bmi_icon -> {
-                    Toast.makeText(this, "bmi_icon selected", Toast.LENGTH_SHORT).show()
+                    val bmiFragment = BmiFragment()
+                    createFragment(bmiFragment)
                 }
             }
             true

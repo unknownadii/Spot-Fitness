@@ -71,6 +71,7 @@ class ExerciseAdapter (private val exerciseList: List<ExerciseData>) : RecyclerV
     }
 
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
+
         val exerciseImage: ImageView = itemView.findViewById(R.id.iv_iconExercise)
         val exerciseName: TextView = itemView.findViewById(R.id.tv_ExerciseName)
         val exerciseTime: TextView = itemView.findViewById(R.id.tv_ExerciseTime)
