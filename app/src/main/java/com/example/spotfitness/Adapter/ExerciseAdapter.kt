@@ -1,18 +1,16 @@
-package com.example.spotfitness
+package com.example.spotfitness.Adapter
 
 import android.app.Dialog
-import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.net.Uri
 import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.spotfitness.Data.ExerciseData
+import com.example.spotfitness.R
 
 class ExerciseAdapter (private val exerciseList: List<ExerciseData>) : RecyclerView.Adapter<ExerciseAdapter.ViewHolder>() {
 

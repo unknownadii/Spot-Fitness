@@ -1,4 +1,6 @@
-package com.example.spotfitness
+package com.example.spotfitness.Data
+
+import com.example.spotfitness.R
 
 object AllExercisesClass {
 
@@ -6,7 +8,8 @@ object AllExercisesClass {
     {
         val listData = ArrayList<ExerciseData>()
         listData.add(
-            ExerciseData(R.drawable.star_jump,
+            ExerciseData(
+                R.drawable.star_jump,
                 "Star Jump","10 Second","1.Stand with your feet shoulder-width apart and a slight bend in your knees. Your shoulders should be directly over your hips with a neutral head and neck position. Your arms should be long and by your sides. Your chin should remain tucked throughout the movement, as if you were holding an egg under your chin.\n" +
                         "2.Pre-tension your shoulders and hips with a good inhale and exhale, and engage your core. Maintain a neutral spine, and begin to bend your hips, knees, and ankles to lower into a quarter-squat or full-squat position. All repetitions should begin from this starting position.\n" +
                         "3.Explosively push your feet into the ground to begin the jump. As you jump into the air, reach your arms and legs out to the side, forming the letter X in the air. Your arms and legs should be fully extended.\n" +
@@ -15,7 +18,8 @@ object AllExercisesClass {
                         "6.Continue to jump for the desired number of repetitions.")
         )
         listData.add(
-            ExerciseData(R.drawable.squates,
+            ExerciseData(
+                R.drawable.squates,
                 "Squats","10 Second","Step 1: Stand straight with feet hip-width apart.\n" +
                         "Stand with your feet apart, slightly wider than your hips, and place your hands on your hips.\n" +
                         "\n" +
@@ -37,7 +41,8 @@ object AllExercisesClass {
                         "Step 5: Repeat the movement.")
         )
         listData.add(
-            ExerciseData(R.drawable.pushups,
+            ExerciseData(
+                R.drawable.pushups,
                 "Push Ups","10 Second","1. Get down on all fours, placing your hands slightly wider than your shoulders. \n" +
                         "\n" +
                         "2. Straighten your arms and legs. \n" +
@@ -49,7 +54,8 @@ object AllExercisesClass {
                         "5. Repeat.  ")
         )
         listData.add(
-            ExerciseData(R.drawable.lungs,
+            ExerciseData(
+                R.drawable.lungs,
                 "Lunges","10 Second","The basic lunge works the quads, glutes, and hamstrings. To correctly do a lunge:\n" +
                         "\n" +
                         "Start by standing up tall.\n" +
@@ -58,7 +64,8 @@ object AllExercisesClass {
                         "Repeat 10 to 12 reps on one leg, or switch off between legs until you’ve totaled 10 to 12 reps per leg.")
         )
         listData.add(
-            ExerciseData(R.drawable.plank,
+            ExerciseData(
+                R.drawable.plank,
                 "Plank","10 Second","1. Plant hands directly under shoulders (slightly wider than shoulder width) like you’re about to do a push-up.\n" +
                         "\n" +
                         "2. Ground toes into the floor and squeeze glutes to stabilize your body. Your legs should be working, too — be careful not to lock or hyperextend your knees.\n" +
@@ -68,7 +75,8 @@ object AllExercisesClass {
                         "4. Hold the position for 20 seconds. As you get more comfortable with the move, hold your plank for as long as possible without compromising your form or breath.")
         )
         listData.add(
-            ExerciseData(R.drawable.sideplank,
+            ExerciseData(
+                R.drawable.sideplank,
                 "Side Plank","10 Second","Lie on your right side with your legs straight and feet stacked on top of each other. Place your right elbow under your right shoulder with your forearm pointing away from you and your hand balled into a fist. The pinky side of your hand should be in contact with the ground.\n" +
                         "With your neck neutral, breathe out and brace your core.\n" +
                         "Lift your hips off the mat so that you’re supporting your weight on your elbow and the side of your right foot. Your body should be in a straight line from your ankles to your head.\n" +
@@ -82,7 +90,8 @@ object AllExercisesClass {
                         "Try to keep your face and bottom hand relaxed during the exercise.")
         )
         listData.add(
-            ExerciseData(R.drawable.stepups,
+            ExerciseData(
+                R.drawable.stepups,
                 "Step-ups","10 Second","Grab a pair of dumbbells and stand next to a plyometric box or a bench with one foot on the box and the other foot on the floor. The height of the box should allow you to maintain a tall posture and a level pelvis. Your leg should be bent at a 90-degree angle. Evenly distribute your weight across the foot on the box, and grip the floor with your other foot to create a stable position.\n" +
                         "Maintain a neutral head and neck position and a tall posture. Your chin should remain tucked throughout the movement, as if you were holding an egg under your chin. Your shoulders should be slightly ahead of your hips and your arms should be long with a slight bend in your elbows. Pre-tension your shoulders and hips while engaging your core. All repetitions should begin from this position.\n" +
                         "Push your foot into the plyometric box to initiate the upward movement. As you begin to stand up, keep your chest high, squeeze your glute, allow your knee to straighten and your hips to travel forward.\n" +
@@ -90,19 +99,22 @@ object AllExercisesClass {
                         "While maintaining your alignment and a level pelvis, begin the downward movement by slowly stepping off the box. Slowly bend your hip, knee, and ankle to lower your foot toward the floor. Lower until your foot contacts the ground. Pause at the bottom position before beginning the next repetition.")
         )
         listData.add(
-            ExerciseData(R.drawable.chairdips,
+            ExerciseData(
+                R.drawable.chairdips,
                 "Chair dips","10 Second","Press into your palms to lift your body and slide forward just far enough that your behind clears the edge of the chair.\n" +
                         "Lower yourself until your elbows are bent between 45 and 90 degrees. Control the movement throughout the range of motion.\n" +
                         "Push yourself back up slowly until your arms are almost straight and repeat.")
         )
         listData.add(
-            ExerciseData(R.drawable.wallsit,
+            ExerciseData(
+                R.drawable.wallsit,
                 "Wall sit","10 Second","Stand near a wall (around two feet away). You’re probably thinking any old distance will do, but complacency on wall proximity is the one true danger in the wall sit. Stand too far away and you’ll miss the wall entirely and potentially crack your head open, and being too near will prevent you getting your legs into the right position during the exercise.\n" +
                         "\n" +
                         "Lean back against the wall with your torso, with your feet shoulder-width apart. Then press back and slide down the wall until your thighs are parallel with the ground. Your knees should be above your ankles and bent at right-angles. Keep your head, shoulders and upper back against the wall and hold the position.")
         )
         listData.add(
-            ExerciseData(R.drawable.pullups,
+            ExerciseData(
+                R.drawable.pullups,
                 "Pull-ups","10 Second","Here’s how to do Pullups with proper form:\n" +
                         "\n" +
                         "Grab the pullup bar with your palms down (shoulder-width grip)\n" +

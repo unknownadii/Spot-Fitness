@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
-import com.example.spotfitness.ExerciseActivity
+import com.example.spotfitness.Activities.ExerciseActivity
 import com.example.spotfitness.R
 import kotlinx.android.synthetic.main.fragment_home.*
 

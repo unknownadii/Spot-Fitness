@@ -1,4 +1,4 @@
-package com.example.spotfitness
+package com.example.spotfitness.Data
 
 data class ExerciseData(val ExerciseImage: Int,
                         val ExerciseName: String,

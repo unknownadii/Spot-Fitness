@@ -1,4 +1,4 @@
-package com.example.spotfitness
+package com.example.spotfitness.Activities
 
 import android.app.Dialog
 import android.content.Intent
@@ -6,9 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
+import com.example.spotfitness.Data.AllExercisesClass
+import com.example.spotfitness.Data.ExerciseData
+import com.example.spotfitness.R
 import kotlinx.android.synthetic.main.activity_doing_exercise.*
-import kotlinx.android.synthetic.main.activity_exercise.*
-import kotlinx.android.synthetic.main.activity_exercise.toolbar_exercise
 import kotlinx.android.synthetic.main.dialog_custom_back_confirmation.*
 
 class DoingExerciseActivity : AppCompatActivity() {
@@ -118,7 +119,7 @@ class DoingExerciseActivity : AppCompatActivity() {
         customDialog.setContentView(R.layout.dialog_custom_back_confirmation)
         customDialog.tvYes.setOnClickListener {
             finish()
-            customDialog.dismiss() // Dialog will be dismissed
+            customDialog.dismiss() // Dialog will be
         }
         customDialog.tvNo.setOnClickListener {
             customDialog.dismiss()

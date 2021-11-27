@@ -4,11 +4,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.spotfitness.AllExercisesClass
-import com.example.spotfitness.ExerciseAdapter
+import com.example.spotfitness.Data.AllExercisesClass
+import com.example.spotfitness.Adapter.ExerciseAdapter
 import com.example.spotfitness.R
-import kotlinx.android.synthetic.main.activity_exercise.*
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_exercise.*
 
 class ExerciseFragment: Fragment(R.layout.fragment_exercise){

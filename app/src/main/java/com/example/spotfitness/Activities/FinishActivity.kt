@@ -1,9 +1,8 @@
-package com.example.spotfitness
+package com.example.spotfitness.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_doing_exercise.*
-import kotlinx.android.synthetic.main.activity_doing_exercise.toolbar_Doing_exercise
+import com.example.spotfitness.R
 import kotlinx.android.synthetic.main.activity_finish.*
 
 class FinishActivity : AppCompatActivity() {

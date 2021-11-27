@@ -1,4 +1,4 @@
-package com.example.spotfitness
+package com.example.spotfitness.Activities
 
 import android.app.Dialog
 import android.graphics.Color
@@ -12,6 +12,7 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.spotfitness.Fragments.*
+import com.example.spotfitness.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

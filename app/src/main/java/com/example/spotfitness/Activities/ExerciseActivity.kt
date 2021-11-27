@@ -1,21 +1,12 @@
-package com.example.spotfitness
+package com.example.spotfitness.Activities
 
-import android.app.Dialog
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
-import android.view.View
-import android.view.ViewGroup
-import android.view.Window
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.spotfitness.Data.AllExercisesClass
+import com.example.spotfitness.Adapter.ExerciseAdapter
+import com.example.spotfitness.R
 import kotlinx.android.synthetic.main.activity_exercise.*
 
 class ExerciseActivity : AppCompatActivity() {
@@ -39,7 +30,7 @@ class ExerciseActivity : AppCompatActivity() {
         // Setting the Adapter with the recyclerview
        rv_ExerciseActivity.adapter = adapter
         btn_startExercise.setOnClickListener {
-            startActivity(Intent(this,DoingExerciseActivity::class.java))
+            startActivity(Intent(this, DoingExerciseActivity::class.java))
             finish()
         }
 
