@@ -1,7 +1,9 @@
 package com.example.spotfitness.Fragments
 
+import android.app.Dialog
 import android.os.Bundle
 import android.view.View
+import android.view.Window
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
@@ -20,6 +22,7 @@ class NutritionFragment:Fragment(R.layout.fragment_nutrition) {
     private var domainSource ="https://api.nal.usda.gov/fdc/v1/foods/search?"
     lateinit var nutritionList :ArrayList<NutritionData>
     lateinit var adapter: NutritionAdapter
+    lateinit var dialog: Dialog
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -34,6 +37,8 @@ class NutritionFragment:Fragment(R.layout.fragment_nutrition) {
                 Toast.makeText(context, "Enter Something To Search", Toast.LENGTH_SHORT).show()
             } else {
                 tv_Nutrition.visibility=View.GONE
+                   showDialog()
+               tv_DishName.text= et_nutrition.text.toString()
                 getApi(et_nutrition.text.toString())
                 cv_nutrition.visibility=View.VISIBLE
             }
@@ -52,6 +57,7 @@ class NutritionFragment:Fragment(R.layout.fragment_nutrition) {
             null,
             Response.Listener {
                 try {
+                       hideDialog()
                     val foodsJsonArray = it.getJSONArray("foods")
                      nutritionList = ArrayList<NutritionData>()
                     val atIndexZero = foodsJsonArray.getJSONObject(0)
@@ -68,10 +74,12 @@ class NutritionFragment:Fragment(R.layout.fragment_nutrition) {
                     adapter.update(nutritionList)
 
                 } catch (e: Exception) {
+                    hideDialog()
                     Toast.makeText(requireContext(), "Not Avilable", Toast.LENGTH_SHORT).show()
                 }
             },
             Response.ErrorListener {
+                hideDialog()
                 Toast.makeText(requireContext(), "error occured", Toast.LENGTH_SHORT).show()
             }
         )
@@ -87,5 +95,16 @@ class NutritionFragment:Fragment(R.layout.fragment_nutrition) {
         // Add a request (in this example, called stringRequest) to your RequestQueue.
        HomeSingleton.getInstance(requireContext()).addToRequestQueue(getSearchRequest)
 
+    }
+    private fun showDialog() {
+        dialog = Dialog(requireContext())
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setContentView(R.layout.dialog_wait)
+        dialog.setCancelable(false)
+        dialog.show()
+    }
+
+    private fun hideDialog() {
+        dialog.dismiss()
     }
 }
