@@ -31,23 +31,28 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.home_icon -> {
+                    ll_menuBar.visibility=View.VISIBLE
                     val homeFragment = HomeFragment()
                     createFragment(homeFragment)
                 }
                 R.id.nutrition_icon -> {
+                    ll_menuBar.visibility=View.GONE
                     val nutritionFragment = NutritionFragment()
                     createFragment(nutritionFragment)
 
                 }
                 R.id.exercises_icon -> {
+                    ll_menuBar.visibility=View.GONE
                     val exerciseFragment = ExerciseFragment()
                     createFragment(exerciseFragment)
                 }
                 R.id.history_icon -> {
+                    ll_menuBar.visibility=View.GONE
                     val historyFragment = HistoryFragment()
                     createFragment(historyFragment)
                 }
                 R.id.bmi_icon -> {
+                    ll_menuBar.visibility=View.GONE
                     val bmiFragment = BmiFragment()
                     createFragment(bmiFragment)
                 }
