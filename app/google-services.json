@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "655800819491",
+    "project_id": "spot-fitness-b9a62",
+    "storage_bucket": "spot-fitness-b9a62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:655800819491:android:a6b0076d2ea4fe2cb33696",
+        "android_client_info": {
+          "package_name": "com.example.spotfitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "655800819491-btv2rean6773s78hfccf5u8t560n2u56.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKAVcxEbpQRYM93ORXRUyZ0pSl0_ei08c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "655800819491-btv2rean6773s78hfccf5u8t560n2u56.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
