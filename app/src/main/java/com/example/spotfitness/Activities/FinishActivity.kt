@@ -36,20 +36,24 @@ class FinishActivity : AppCompatActivity() {
             finish()
         }
     }
-    private fun setTime()
-    {
+
+    private fun setTime() {
         val df: DateFormat = SimpleDateFormat("EEE, d MMM yyyy, HH:mm")
         val currentTime: String = df.format(Calendar.getInstance().time)
         AllExercisesClass.arrayHistoryList.add(currentTime)
         addDateData(currentTime)
     }
-    private fun addDateData(time :String) {
+
+    private fun addDateData(time: String) {
 
         val uiduser = auth.currentUser!!.uid
 
-        database= FirebaseDatabase.getInstance("https://spot-fitness-b9a62-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("users")
-
-        database.child(uiduser).child("ExerciseHistory").setValue( AllExercisesClass.arrayHistoryList).addOnCompleteListener {
+        database = FirebaseDatabase.getInstance(
+            "https://spot-fitness-b9a62-default-rtdb.asia-southeast1.firebasedatabase.app/"
+        )
+            .getReference("users")
+        database.child(uiduser).child("ExerciseHistory")
+           .setValue(AllExercisesClass.arrayHistoryList).addOnCompleteListener {
 
             Toast.makeText(this, "successful added in Exercisehistory", Toast.LENGTH_SHORT).show()
         }.addOnFailureListener {

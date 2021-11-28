@@ -85,6 +85,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
     private fun showDialog() {
         dialog = Dialog(this)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -133,6 +134,9 @@ class MainActivity : AppCompatActivity() {
                 lvEditProfile.visibility = View.GONE
                 Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show()
                 dialog.dismiss()
+                startActivity(Intent(this,MainActivity::class.java))
+                //it is used for clearing the stack before that
+                finishAffinity()
             } else {
                 Toast.makeText(this, "enter something to continue", Toast.LENGTH_SHORT).show()
             }

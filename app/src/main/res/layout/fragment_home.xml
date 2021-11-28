@@ -41,7 +41,7 @@
                         android:id="@+id/tv_HomeFragmentUserName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ADITYA"
+                        android:text=""
                         android:textColor="@color/black"
                         android:textSize="28sp"
                         android:textStyle="bold"/>
