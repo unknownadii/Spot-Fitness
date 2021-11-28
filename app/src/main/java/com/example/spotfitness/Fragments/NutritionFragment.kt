@@ -32,7 +32,7 @@ class NutritionFragment:Fragment(R.layout.fragment_nutrition) {
         // the image with the count of view
         adapter = NutritionAdapter()
 
-        searchIconNutrition.setOnClickListener {
+        et_nutrition.setOnClickListener {
             if (et_nutrition.text?.isEmpty() == true) {
                 Toast.makeText(context, "Enter Something To Search", Toast.LENGTH_SHORT).show()
             } else {

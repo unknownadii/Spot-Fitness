@@ -13,6 +13,8 @@ import kotlinx.android.synthetic.main.activity_doing_exercise.*
 import kotlinx.android.synthetic.main.dialog_custom_back_confirmation.*
 
 class DoingExerciseActivity : AppCompatActivity() {
+
+    //timer work on different thread in background
     private var restProgress = 0
     private var restTimer: CountDownTimer? = null
     private var count = 0
@@ -41,13 +43,13 @@ class DoingExerciseActivity : AppCompatActivity() {
         progressBarExercise.progress = restProgress
         // Sets the current progress to the specified value.
         // Here we have started a timer of 10 seconds so the 10000 is milliseconds is 10 seconds and the countdown interval is 1 second so it 1000.
-        restTimer = object : CountDownTimer(2000, 1000) {
+        restTimer = object : CountDownTimer(1000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 restProgress++
                 // It is increased by 1
-                progressBarExercise.progress = 2 - restProgress
+                progressBarExercise.progress = 1 - restProgress
                 // Indicates progress bar progress
-                tvTimer.text = (2 - restProgress).toString()
+                tvTimer.text = (1 - restProgress).toString()
                 // Current progress is set to text view in terms of seconds.
             }
 
@@ -118,13 +120,22 @@ class DoingExerciseActivity : AppCompatActivity() {
          The resource will be inflated, adding all top-level views to the screen.*/
         customDialog.setContentView(R.layout.dialog_custom_back_confirmation)
         customDialog.tvYes.setOnClickListener {
-            finish()
-            customDialog.dismiss() // Dialog will be
+            startActivity(Intent(this,MainActivity::class.java))
+            //it is used for clearing the stack before that
+            finishAffinity() // Dialog will be
         }
         customDialog.tvNo.setOnClickListener {
             customDialog.dismiss()
         }
         //Start the dialog and display it on screen.
         customDialog.show()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        if (restTimer!=null)
+        {
+            restTimer!!.cancel()
+        }
     }
 }
