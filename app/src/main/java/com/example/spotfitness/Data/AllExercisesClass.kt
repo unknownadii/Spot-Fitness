@@ -3,7 +3,7 @@ package com.example.spotfitness.Data
 import com.example.spotfitness.R
 
 object AllExercisesClass {
-
+ var  arrayHistoryList : ArrayList<String> =ArrayList()
      fun addExerciseData(): ArrayList<ExerciseData>
     {
         val listData = ArrayList<ExerciseData>()
