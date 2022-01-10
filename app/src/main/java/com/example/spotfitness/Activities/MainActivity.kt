@@ -43,11 +43,19 @@ class MainActivity : AppCompatActivity() {
         auth = Firebase.auth
         writeData()
 
+          iv_menuBar.setOnClickListener {
+              try
+              {
+                  showDialog()
+              }
+              catch (e : Exception)
+              {
+                  Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+              }
 
+            }
 
-        iv_menuBar.setOnClickListener {
-            showDialog()
-        }
+       
         val homeFragment = HomeFragment()
         createFragment(homeFragment)
         //for the bottom navigation bar
